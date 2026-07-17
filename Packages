@@ -1,0 +1,16 @@
+Package: com.cam.chmp4
+Version: 2.1
+Architecture: iphoneos-arm64
+Maintainer: YellU
+Installed-Size: 2508
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: ./debs/com.cam.chmp4_ios16_b1-z4.deb
+Size: 601192
+MD5sum: 8834de5ea9969f3d556b438f4d6e33d3
+SHA1: aa739817551ddae0dd3f7a1bde31e4b6da23b27f
+SHA256: eb2a537a5d8beb6a6d531d2f67629ad17e46c5f79a937d7a11d4f3373f405de8
+Section: Tweaks
+Description: VCAM (RTMP) for iOS!
+Author: YellU
+Name: vcam-chmp4
+
