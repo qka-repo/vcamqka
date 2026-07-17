@@ -1,0 +1,23 @@
+name: Build Repo
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create Packages
+        run: |
+          dpkg-scanpackages ./debs /dev/null > Packages
+          bzip2 -c9 Packages > Packages.bz2
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Packages Packages.bz2
+          git commit -m "Auto update Packages" || exit 0
+          git push
